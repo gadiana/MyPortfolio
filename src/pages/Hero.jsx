@@ -22,7 +22,7 @@ const Hero = ({ isDarkMode }) => {
                 className="text-5xl font-bold mb-4 text-center"
                 layoutId="main-title"
             >
-                Hi, I'm <span style={{ color: 'var(--name-color)' }}>Ezekiel</span>
+                Hi there!, I'm <span style={{ color: 'var(--name-color)' }}>Ezekiel</span>
             </motion.h1>
             <Typewriter 
                 roles={roles} 
