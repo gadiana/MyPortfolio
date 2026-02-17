@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #1a202c;
+  --secondary-color: #2d3748;
+  --accent-color: #4a5568;
+  --background-color: #f7fafc;
+  --text-color: #2d3748;
+  --name-color: #427ba7;
+  --font-family: "lexend", sans-serif;
+}
+
+.dark-mode {
+  --primary-color: #2d3748;
+  --secondary-color: #1a202c;
+  --accent-color: #4a5568;
+  --background-color: #2d3748;
+  --text-color: #f7fafc;
+  --name-color: #73c0fc;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lexend {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Custom animations for theme toggle */
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.simple-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: linear-gradient(to bottom, #ffffff, #f5f5dc);
+}
