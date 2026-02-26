@@ -23,7 +23,7 @@ const ThemeButton = ({ onThemeChange }) => {
   };
 
   return (
-    <label className="inline-block w-16 h-[34px] mt-4 cursor-pointer absolute top-4 right-6">
+    <label className="inline-block w-16 h-[34px] mt-4 cursor-pointer fixed top-4 right-6">
       {/* Sun Icon */}
       <span className="absolute top-1.5 left-9 z-[1] w-6 h-6 animate-[rotate_15s_linear_infinite]">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

@@ -1,11 +1,14 @@
+import "./App.css";
 import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import "./App.css";
+
 import Hero from "./pages/Hero";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import ProjectDetails from "./pages/ProjectDetails";
+
 import ThemeButton from "./components/ThemeButton";
 import Particles from "./components/Particles";
 import LightBackground from "./components/LightBackground";
@@ -27,14 +30,9 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Hero isDarkMode={isDarkMode} />} />
           <Route path="/about" element={<AboutMe isDarkMode={isDarkMode} />} />
-          <Route
-            path="/projects"
-            element={<Projects isDarkMode={isDarkMode} />}
-          />
-          <Route
-            path="/contact"
-            element={<Contact isDarkMode={isDarkMode} />}
-          />
+          <Route  path="/projects" element={<Projects isDarkMode={isDarkMode} />}/>
+          <Route path="/projects/:projectType" element={<ProjectDetails isDarkMode={isDarkMode} />} />
+          <Route path="/contact" element={<Contact isDarkMode={isDarkMode} />}/>
         </Routes>
       </AnimatePresence>
     </div>
